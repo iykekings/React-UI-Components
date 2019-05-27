@@ -1,1 +1,21 @@
 /* All styles for your header Components live here */
+.header-top {
+  display: flex;
+  align-items: center;
+}
+
+.header-top .header-image {
+  width: 50px;
+  margin-right: 1rem;
+}
+.header-top .header-image img {
+  width: 100%;
+}
+.header-top .header-title {
+  display: inline;
+  margin-right: 0.5rem;
+}
+
+.header-content {
+  text-align: justify;
+}
