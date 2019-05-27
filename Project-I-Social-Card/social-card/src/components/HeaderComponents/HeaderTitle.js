@@ -4,7 +4,7 @@ import './Header.css';
 const HeaderTitle = () => {
   return (
     <div>
-      <h3 className="title">Lambda School</h3>
+      <h3 className="header-title">Lambda School</h3>
       <span>
         @lambdaSchool *
         {Date(Date.now)
