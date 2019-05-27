@@ -5,11 +5,11 @@ import './Card.css';
 
 const CardContainer = () => {
   return (
-    <a className="card-container" href="https://www.reactjs.org">
+    <div className="card-container" onClick={goToReact}>
       <CardBanner />
       <CardContent />
-    </a>
+    </div>
   );
 };
-
+const goToReact = () => window.location = 'https://reactjs.org'
 export default CardContainer;
