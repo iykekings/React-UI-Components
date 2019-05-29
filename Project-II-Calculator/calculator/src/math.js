@@ -1,26 +1,25 @@
-export default function calc(str) {
-  let work = str;
+export default function calc(expression) {
+  let current = expression;
   function arith(type) {
     const typeExp = new RegExp(`[${type}]`);
     const matchExp = new RegExp(`(?:\\d+[${type}]\\d+)`);
-    while (typeExp.test(work)) {
-      let [start, stop] = work.match(matchExp)[0].split(type);
-      [start, stop] = [parseInt(start), parseInt(start)];
+    while (typeExp.test(current)) {
+      let [first, second] = current.match(matchExp)[0].split(type);
       switch (type) {
         case '/':
-          work = work.replace(matchExp, `${stop / start}`);
+          current = current.replace(matchExp, `${parseInt(first) / parseInt(second)}`);
           break;
-        case '*':
-          work = work.replace(matchExp, `${stop * start}`);
+        case 'x':
+          current = current.replace(matchExp, `${parseInt(first) * parseInt(second)}`);
           break;
         case '+':
-          work = work.replace(matchExp, `${stop + start}`);
+          current = current.replace(matchExp, `${parseInt(first) + parseInt(second)}`);
           break;
         case '-':
-          work = work.replace(matchExp, `${stop - start}`);
+          current = current.replace(matchExp, `${parseInt(first) - parseInt(second)}`);
           break;
         default:
-          work = +work;
+          current = +current;
       }
     }
   }
@@ -28,5 +27,5 @@ export default function calc(str) {
   arith('x');
   arith('+');
   arith('-');
-  return work;
+  return current;
 }
