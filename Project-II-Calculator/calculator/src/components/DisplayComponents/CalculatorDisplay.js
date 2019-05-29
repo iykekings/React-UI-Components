@@ -10,8 +10,8 @@ const CalculatorDisplay = () => {
   const [strTiny, setStrTiny] = useState('');
 
   // Functions
-  const numClick = num => setStrMain(strMain + num);
-  const symClick = sym => {
+  const numClicked = num => setStrMain(strMain + num);
+  const symClicked = sym => {
     if (sym === '=') {
       setStrTiny(strMain);
       setStrMain(eval(strMain));
@@ -30,7 +30,7 @@ const CalculatorDisplay = () => {
         {numbers.map(num => (
           <NumberButton
             key={num.toString()}
-            onClick={() => numClick(num)}
+            numClick={() => numClicked(num)}
             number={num}
           />
         ))}
@@ -39,7 +39,7 @@ const CalculatorDisplay = () => {
         {symbols.map(sym => (
           <ActionButton
             key={sym.toString()}
-            onClick={() => symClick(sym)}
+            symClick={() => symClicked(sym)}
             symbol={sym}
           />
         ))}
