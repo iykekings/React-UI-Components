@@ -1,0 +1,20 @@
+.calculator-display {
+  width: 400px;
+  margin: 5rem 0;
+}
+
+.calculator-result {
+  height: 75px;
+  background: #2a2a2a;
+  display: flex;
+  flex-direction: column;
+}
+
+.calculator-result .tiny {
+  color: grey;
+  font-size: 0.8rem;
+}
+.calculator-result .main {
+  color: white;
+  font-size: 0.8rem;
+}

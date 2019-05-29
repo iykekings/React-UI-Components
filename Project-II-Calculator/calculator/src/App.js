@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import CalculatorDisplay from './CalculatorDisplay';
+import CalculatorDisplay from './components/DisplayComponents/CalculatorDisplay';
 
 const App = () => {
   return (
