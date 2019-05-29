@@ -1,8 +1,8 @@
 import React from 'react';
 import './Button.css';
 
-const ActionButton = props => {
-  return <div className="action-button">{props.symbol}</div>;
+const ActionButton = ({symbol}) => {
+  return <div className="action-button">{symbol}</div>;
 };
 
 export default ActionButton;
