@@ -7,7 +7,7 @@
 }
 
 .calculator-result {
-  height: 100px;
+  min-height: 100px;
   background: #2a2a2a;
   display: flex;
   flex-direction: column;
@@ -17,12 +17,13 @@
 .calculator-result .result-tiny {
   color: #bcabab;
   font-size: 1rem;
-  padding: 3px 1rem;
-  height: 30px;
+  font-weight: bold;
+  padding: 10px 1rem;
+  min-height: 30px;
 }
 .calculator-result .result-main {
   color: white;
-  font-size: 2rem;
+  font-size: 2.5rem;
   flex-grow: 1;
   text-align: end;
   padding: 0 1rem;
@@ -34,13 +35,14 @@
   grid-template-columns: repeat(3, 1fr);
 }
 .c-d-numbers > * {
-  height: 75px;
+  min-height: 75px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px grey solid;
+  border: 1px #d4d4d4 solid;
   font-size: 2rem;
   cursor: pointer;
+  color: #2a2a2a;
 }
 .c-d-numbers :nth-child(11) {
   grid-column: 1/-1;
@@ -55,7 +57,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px grey solid;
+  border: 1px #d4d4d4 solid;
   font-size: 3rem;
   background: #ff2020;
   color: white;
