@@ -3,6 +3,7 @@ import './Display.css';
 import CalculatorResult from './CalculatorResult';
 import NumberButton from '../ButtonComponents/NumberButton';
 import ActionButton from '../ButtonComponents/ActionButton';
+// import calc from '../../math';
 
 const CalculatorDisplay = () => {
   // States
@@ -21,12 +22,21 @@ const CalculatorDisplay = () => {
   };
 
   const numbers = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0];
-  const symbols = ['+', '-', 'x', '/', '='];
+  const symbols = ['+', '-', '*', '/', '='];
+
   return (
     <div className="calculator-display">
       <CalculatorResult main={strMain} tiny={strTiny} />
       <div className="c-d-numbers">
-        <span className="clear">Clear</span>
+        <span
+          className="clear"
+          onClick={() => {
+            setStrMain('');
+            setStrTiny('');
+          }}
+        >
+          Clear
+        </span>
         {numbers.map(num => (
           <NumberButton
             key={num.toString()}
